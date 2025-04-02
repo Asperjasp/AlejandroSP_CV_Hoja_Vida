@@ -12,7 +12,7 @@
 %% ----- Required Packages -----
 %% Define page layout
 \RequirePackage[margin=0.5in]{geometry}
-    \pagestyle{empty}
+\pagestyle{empty}
 
 %% ----- Custom Commands -----
 % Header Block
@@ -56,6 +56,7 @@
             {}%
             \ifcommandkey{linkedin}%
             {%
+                \\ % Line Break to estar bonito o.o
                 \linkedin{\commandkey{linkedin}}%
                 \ifcommandkey{state}{\contactseparator}{}%
             }%
