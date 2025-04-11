@@ -19,16 +19,23 @@
 \newkeycommand{\resumeheader}[
     firstname,middleinitial,lastname,
     email,
-    phone,  % Must be in XXX-XXX-XXXX format to become a valid link
+    phone,  % Must be in XXX-XXX-XXXX format to become a valid link.
     github,
     linkedin,
     city,  % Ignored if `state` is not also provided
     state,
-    qrcode  % Path to an image of a 1000x1000px QR Code
+    qrcode,  % Path to an image of a 1000x1000px QR Code,
+    URLweb  % Must be a valid URL to become a valid link.
 ]{
     \begin{flushleft}
+        % Use the URLweb value with the website command
+        \ifcommandkey{URLweb}{%
+            \website{\commandkey{URLweb}}%
+        }{}%
+        % Name title should be separate
         \nametitle{\commandkey{firstname}}{\ifcommandkey{middleinitial}{\commandkey{middleinitial}. }{}\commandkey{lastname}}
         \vspace{7pt}
+
         {%
             \ifcommandkey{email}%
             {%

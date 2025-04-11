@@ -1,3 +1,4 @@
+
 \documentclass{ExpressiveResume}
 
 % ----- Resume -----
@@ -7,16 +8,17 @@
 % ----- Name + Contact Information -----
 % Latex format  in configurations formatting.latex
 \resumeheader[
-    firstname=Alejandro,
+    firstname={Alejandro},
     %middleinitial=No middle name D:,
-    lastname=Sánchez Poveda,
-    email=alesanchezpov@gmail.com,
-    phone=321-7098-173       ,
-    linkedin=alejandrosanchezpoveda,
-    github=Asperjasp,
-    city=Bogotá,
-    state=Colombia,
-    qrcode=./images/Linkedin.png
+    lastname={Sánchez Poveda},
+    email={alesanchezpov@gmail.com},
+    phone={321-7098-173}       ,
+    linkedin={alejandrosanchezpoveda},
+    github={Asperjasp},
+    city={Bogotá},
+    state={Colombia},
+    qrcode={./images/Linkedin.png},
+    URLweb={https://www.linkedin.com/in/alejandrosanchezpoveda/        }
 ]
 
 \objective{A Sophomore Computer Scientist with interest in developing AI
@@ -57,35 +59,61 @@
 }
 %\proyect{Sentiment Analysis Senchimentaru Songs}{2024-1}{
 
-
-
-%}
-
 % ----- Education -----
 \section{Education}
 
 \degree{B.S. Computer Science \honors{}}{\href{https://unal.edu.co/}{Universidad Nacional de Colombia - UNAL}}{2024-Present}{
-    \achievement{GPA of 4.0 }
-    \achievement{Engaged in a 1-Year Seminar of Generative Artificial
-        Inteligence at \href{https://linktr.ee/simg_un}{SIMG} where I learned about Deep Learning mainly with
-        pytorch, diffusion models and machine learning best practices as we
-        dived into other fields like Quantum ML and Liquid Neural Networks, Networks as research}
-    \achievement{Actively Participated for 3 months in the \href{https://linktr.ee/uqbarun}{Uqbar - Cybersecurity Seminar} in
-        partnership with \href{https://www.hackthebox.com/}{Hack the Box},   where I was able to attend        \href{https://jcunal.com/Call4Posters.html}{JCUN} learn from
-        keynotes speakers about Offensive Security and Learn Best
-        Practice for Cybersecurity when I continued my studies and
-        practices}
-    \achievement{Participated in a Data Structures and Algorithms
-        class leaded by
-        \href{https://scholar.google.com.co/citations?user=-8qUEcUAAAAJ&hl=es}{Juan
-            Carlos Moreno}, where we dived into the first 300 pages of the Peter Brass
-        Advanced Data Structures Book, including a-b trees, red-black
-        trees, and finger trees}
-}
+    \achievement{Engaged for 1-Year Seminar at the Generative Artificial
+        Inteligence seminar called  \href{https://linktr.ee/simg_un}{SIMG}
+        where I learned about Deep Learning with PyTorch.
+        and Machine Learning theory and
+        deployment}
 
+    \achievement{Actively Participated for 3 months in the \href{https://linktr.ee/uqbarun}{Uqbar - Cybersecurity Seminar} in
+        partnership with \href{https://www.hackthebox.com/}{Hack the
+            Box},   where I was able to attend
+        \href{https://jcunal.com/Call4Posters.html}{JCUN} and learn from
+        keynotes speakers about Cybersecurity
+    }
+    \achievement{Participated in a Data Structures and Algorithms
+        class leaded by \href{https://scholar.google.com.co/citations?user=-8qUEcUAAAAJ&hl=es}{Juan
+            Carlos Moreno}, where we dived into the first 200 pages of the Peter Brass
+        Advanced Data Structures Book which included a-b trees}
+}
 \degree{High School Degree \honors{Valedictorian of 2023 Prom}}{\href{https://ispaeducacion.edu.co/}{Instituto San Pablo Apóstol - Libertador}}{2018-2023}
-\achievement{Ranked First within the conglomerate of schools known as \href{https://seab.arquibogota.org.co/}{SEAB}( Arquideocesis de Bogotá ) with 414/500 ICFES (SAT Equivalent) in Colombia}
+\achievement{Ranked First within the conglomerate of schools known as \href{https://seab.arquibogota.org.co/}{SEAB}(Arquideocesis de Bogotá) with 414/500 ICFES (SAT Equivalent) in Colombia}
 \achievement{Completed a technical course in musical performance with violin and played in 2021 Concert }
+% ---- Skills ------
+\section{Technical Skills }
+
+\begin{multicols}{3}
+    \begin{itemize}
+        \item \tech{Python}
+        \item \tech{PyTorch}
+        \item \tech  {TensorFlow}
+        \item \tech {GCP - Google Cloud}
+        \item \tech {Docker}
+        \item \tech {C++}
+        \item \tech  {Anaconda}
+        \item \tech {Linux / WSL}
+        \item \tech {Notion}
+              % \item \tech Tableau
+              %\item \tech CUDA
+              % \item \tech LangGraph
+
+              % Add more skills
+
+    \end{itemize}
+\end{multicols}
+% ----- Languages -----
+\section{Languages}
+\begin{multicols}{3}
+    \begin{itemize}
+        \item Spanish (Native)
+        \item English (C1 - IELTS 7.0)
+        \item Japanese (N3 - Intermediate)
+    \end{itemize}
+\end{multicols}
 
 % ----- Awards -----
 \section{Awards - Certificates}
@@ -93,7 +121,20 @@
 \award{Advanced Artificial Inteligence}{Cymetria - MINTIC}{2023}{
     \achievement{Learned a broad category of topics around the machine Learning potential and workflow from utilities delivering Sentiment Analysis, Convolutional Neural Networks for identifying objects in real life to the actual testing using metrics like accuracy, recall and the confusion matrix}
 }
+\award{IELTS C1 English Level 7.0}{British Council}{2023}{
+    \begin{multicols}{2}
+        \begin{itemize}
+            \item Listening: 7.5
+            \item Reading: 8.0
+            \item Writing: 6.0
+            \item Speaking: 6.5
+        \end{itemize}
+    \end{multicols}
+}
+
 \degree{High School Degree \honors{Valedictorian of 2023 Prom}}{\href{https://ispaeducacion.edu.co/}{Instituto San Pablo Apóstol - Libertador}}{2018-2023}
 \achievement{Ranked First within the conglomerate of schools known as \href{https://seab.arquibogota.org.co/}{SEAB}( Arquideocesis de Bogotá ) with 414/500 ICFES (SAT Equivalent) in Colombia}
-\achievement{Completed a technical course in musical performance with violin, participating in a 2021 Concert in }
+
+
 \end{document}
+

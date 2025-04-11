@@ -1,6 +1,8 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{Expressive}[2024/08/10 Base Class for Expressive Resumes/Cover Letters]
 
+\RequirePackage{etex}  % Add this to resolve the extended allocation warning
+
 \newcommand{\spacesmall}{5pt}
 \newcommand{\spacenormal}{10pt}
 
@@ -38,6 +40,8 @@
 \RequirePackage{multirow}
 % \RequirePackage{multicolumn}  % Built-in command
 
+
+
 %% Add support for hyperlinks
 \RequirePackage{hyperref}
 \definecolor{linkcolour}{rgb}{0,0.0,0.0}
@@ -51,6 +55,10 @@
 %% Add support for nuanced list formatting
 \RequirePackage{enumitem}
 \setlist{nosep,topsep=0pt,leftmargin=22pt}
+
+% Put the skills and Keywords in equally spaced columns
+\RequirePackage{multicol}
+% \begin{multicols}{3} \begin{itemize} \end{itemize} \end{multicols}
 
 %% Support drawing lines around experiences (\renewenvironment from https://stackoverflow.com/a/9974713/14765128)
 % \RequirePackage{framed}
@@ -114,12 +122,15 @@
 \newcommand{\github}[1]{\faIcon{github} \href{https://github.com/#1/}{github.com/#1}}
 \newcommand{\linkedin}[1]{\faIcon{linkedin} \href{https://linkedin.com/in/#1/}{linkedin.com/in/#1}}
 \newcommand{\location}[1]{\faIcon{map-marker-alt} #1}
+% Takees One Argument and It is going to be the full name of the URL and your name Which are the parameters of name and surname
+% Take inot account Your website format since this only appends the  value added in Expressiveresume to https:// so be sure it matches your url
+\newcommand{\website}[1]{\href{https://#1}{{\Large\faIcon{globe}}}} % ASP - Your Personal Website
 
 % Experience/Achievements
 \newcommand{\equivalent}{\textnormal{\textsc{equivalent}}}
 \newcommand{\honors}[1]{\textnormal{\emph{#1}}}
 \newcommand{\roletitle}[1]{\textbf{#1}}
-\newcommand{\tech}[1]{{\color{Brown}\textbf{#1}}}
+\newcommand{\tech}[1]{{\color{Brown}\textbf{\detokenize{#1}}}}
 \newcommand{\tenure}[1]{\textbf{#1}}
 \newcommand{\achievement}[1]{%
     \begin{itemize}
