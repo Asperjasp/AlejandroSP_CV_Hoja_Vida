@@ -18,6 +18,5 @@ services:
       # Git config
       - ~/.gitconfig:/root/.gitconfig
     environment:
-      - TZ=
-    entrypoint: ["zsh", "-c", "while sleep 1000; do :; done"]
+      - TZ=America/Bogota
  
